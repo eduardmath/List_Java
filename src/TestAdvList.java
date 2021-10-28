@@ -11,11 +11,7 @@ public class TestAdvList {
 		KjvAdvList list2 = new KjvAdvList(myList2);
 		KjvAdvList list = new KjvAdvList();
 
-		KjvIterator iterator1 = new KjvIterator(list1);
-		KjvIterator iterator2 = new KjvIterator(list2);
-		while(iterator1.hasNext() && iterator2.hasNext()){
-			list.add(iterator1.next());
-			list.add(iterator2.next());
-		}
+		list.join(list1, list2);
+		list.print();
 	}
 }
