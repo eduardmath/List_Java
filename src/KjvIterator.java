@@ -14,7 +14,7 @@ public class KjvIterator implements Iterator<Integer> //util //Iterator
 	public Integer next() 
 	  {
 	   if (!hasNext()) 
-		   {throw new NoSuchElementException("��� ���������� ��������");
+		   {throw new NoSuchElementException("Next");
 		   
 		   }
 	   Integer item = new Integer(current.item);
@@ -25,7 +25,7 @@ public class KjvIterator implements Iterator<Integer> //util //Iterator
 	  }
 	public void remove() 
 	  { if (pprev==prev)
-		  throw new IllegalStateException("�������� �������� �����������");
+		  throw new IllegalStateException("Remove");
 		if (pprev == null)
 		  list.first = list.first.next;
 	    else

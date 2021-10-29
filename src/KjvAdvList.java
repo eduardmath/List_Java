@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class KjvAdvList extends AbstractCollection<Integer>  //  implements Iterable<Integer>
+public class KjvAdvList implements Iterable<Integer>
   {
 	int count = 0;
 	KjvNode first = null;
@@ -23,7 +23,7 @@ public class KjvAdvList extends AbstractCollection<Integer>  //  implements Iter
 		return true;
 	}
 	public boolean join(KjvAdvList list1, KjvAdvList list2){
-	KjvIterator iterator1 = new KjvIterator(list1);
+		KjvIterator iterator1 = new KjvIterator(list1);
 		KjvIterator iterator2 = new KjvIterator(list2);
 		while(iterator1.hasNext() || iterator2.hasNext()){
 			if(iterator1.hasNext()) this.add(iterator1.next());
@@ -39,7 +39,6 @@ public class KjvAdvList extends AbstractCollection<Integer>  //  implements Iter
 		   count++;
 		   return true;
 	}
-    @Override
 	public int size() { return count;}
 
     @Override
